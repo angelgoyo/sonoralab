@@ -1,0 +1,2854 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Fredoka:wght@300..700&display=swap');
+
+/* =========================
+FUENTE ESTAMPA SCRIPT
+========================= */
+
+@font-face {
+    font-family: 'Estampa Script';
+    src: url('Fonts/EstampaScript-Regular.woff2') format('woff2'),
+        url('Fonts/EstampaScript-Regular.woff') format('woff'),
+        url('Fonts/EstampaScript-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Estampa Script';
+    src: url('Fonts/EstampaScript-Light.woff2') format('woff2'),
+        url('Fonts/EstampaScript-Light.woff') format('woff'),
+        url('Fonts/EstampaScript-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Estampa Script';
+    src: url('Fonts/EstampaScript-Bold.woff2') format('woff2'),
+        url('Fonts/EstampaScript-Bold.woff') format('woff'),
+        url('Fonts/EstampaScript-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+/*ESCRITORIO*/
+
+/* =========================
+RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url(Images/header.png);
+    background-size: cover;
+    background-position: center;
+
+    padding: 40px 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+nav {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    /* NUEVO */
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    padding: 18px 30px;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    position: relative;
+    z-index: 10;
+}
+
+/* LOGO */
+
+.Logo {
+    width: 140px;
+    height: auto;
+}
+
+/* MENU */
+
+.menu {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+.menu li {
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu li:hover {
+    color: #B17FCE;
+}
+
+/* =========================
+TEXTOS HEADER
+========================= */
+
+.header-txt {
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 120px;
+
+    max-width: 700px;
+}
+
+/* TITULOS */
+
+.header-txt h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 300;
+    color: white;
+}
+
+.header-txt h3 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 300;
+    color: white;
+
+    line-height: 1.1;
+
+    margin-top: 10px;
+}
+
+/* =========================
+BOTONES
+========================= */
+
+.header-btns {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+.btn-header1 {
+    background-color: #B17FCE;
+
+    padding: 18px 30px;
+
+    border-radius: 50px;
+
+    transition: 0.4s ease;
+
+    font-size: 1rem;
+    font-weight: 300;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.btn-header1:hover {
+    background-color: #E94228;
+    color: black;
+}
+
+@media(max-width:992px) {
+
+    header {
+        padding: 30px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .header-txt {
+        margin-top: 80px;
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .header-btns {
+        justify-content: center;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    header {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+    nav {
+        padding: 18px 16px;
+    }
+
+    .Logo {
+        width: 110px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu li {
+        font-size: 0.9rem;
+    }
+
+    .header-txt {
+        margin-top: 60px;
+    }
+
+    .header-txt h3 {
+        line-height: 1.2;
+    }
+
+    .btn-header1 {
+        width: 100%;
+        text-align: center;
+        padding: 16px 24px;
+    }
+
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:480px) {
+
+    nav {
+        gap: 15px;
+
+        padding: 16px 14px;
+
+        border-radius: 18px;
+    }
+
+    .menu {
+        flex-direction: column;
+
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .menu li {
+        font-size: 0.9rem;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .Logo {
+        width: 95px;
+    }
+
+    .header-txt h2 {
+        font-size: 1.2rem;
+    }
+
+    .header-txt h3 {
+        font-size: 2.2rem;
+    }
+
+    .header-btns {
+        width: 100%;
+    }
+
+    .btn-header1 {
+        width: 100%;
+    }
+
+}
+
+/* =========================
+EMOCIONES
+========================= */
+
+.emociones {
+    background-color: white;
+    padding: 80px 5%;
+    width: 100%;
+}
+
+.emociones h4 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    color: black;
+    margin-bottom: 60px;
+}
+
+/* CONTENEDOR */
+
+.cont-emociones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    width: 100%;
+    align-items: start;
+}
+
+/* CARD */
+
+.emoji {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* IMAGEN */
+
+.cara {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* BOTON NEGRO */
+
+.btn-emoji {
+    background-color: black;
+    padding: 16px 22px;
+    border-radius: 50px;
+    transition: 0.4s ease;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: white;
+    margin-top: 25px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    max-width: 260px;
+}
+
+.btn-emoji:hover {
+    background-color: #E94228;
+}
+
+/* TEXTO */
+
+.txt-emoji {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-weight: 300;
+    margin-top: 20px;
+    line-height: 1.5;
+    max-width: 260px;
+}
+
+/* BOTON INFERIOR */
+
+.boton {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-top: 25px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.play-link:hover .boton {
+    transform: scale(1.12);
+}
+
+.play-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .cont-emociones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .emociones {
+        padding: 60px 20px;
+    }
+
+    .cont-emociones {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .cara {
+        max-width: 150px;
+    }
+
+    .btn-emoji {
+        padding: 14px 18px;
+    }
+
+}
+
+/* =========================
+INSTRUMENTOS
+========================= */
+
+.instrumentos {
+    background-color: black;
+    width: 100%;
+    padding: 80px 5%;
+    overflow: hidden;
+}
+
+/* CONTENEDOR GENERAL */
+
+.cont-instrumentos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+TEXTOS
+========================= */
+
+.txt {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+}
+
+.txt h3 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: white;
+    line-height: 1.1;
+}
+
+.txt h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: white;
+    margin-top: 10px;
+}
+
+.txt h5 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
+    color: white;
+    line-height: 1;
+}
+
+/* PÁRRAFO */
+
+.txt-instrumentos {
+    margin-top: 30px;
+
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+
+    line-height: 1.6;
+    color: white;
+}
+
+/* BOTÓN */
+
+.btn-instrumento {
+    background-color: #E94228;
+
+    padding: 18px 28px;
+
+    border-radius: 50px;
+
+    transition: 0.4s ease;
+
+    font-size: 1rem;
+    color: white;
+
+    margin-top: 35px;
+
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+
+    width: max-content;
+
+    cursor: pointer;
+}
+
+.btn-instrumento:hover {
+    background-color: white;
+    color: black;
+}
+
+/* =========================
+CARRUSEL
+========================= */
+
+.carrusel {
+    position: relative;
+
+    flex: 1.5;
+    min-width: 300px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    background: black;
+
+    padding: 30px 60px;
+}
+
+/* VIEWPORT */
+
+.carrusel-viewport {
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+}
+
+.carrusel-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+/* TRACK */
+
+.carrusel-track {
+    display: flex;
+    gap: 24px;
+}
+
+/* ITEMS */
+
+.carrusel-item {
+    flex: 0 0 calc((100% - 48px) / 3);
+
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+}
+
+/* IMAGEN */
+
+.carrusel-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.carrusel-img img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* LABEL */
+
+.carrusel-label {
+    display: inline-block;
+
+    padding: 12px 30px;
+
+    border: 1px solid #fff;
+    border-radius: 999px;
+
+    color: #fff;
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    min-width: 160px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.carrusel-label:hover {
+    background: #fff;
+    color: #000;
+
+    transform: scale(1.05);
+}
+
+/* =========================
+BOTONES CARRUSEL
+========================= */
+
+.carrusel-btn {
+    position: absolute;
+
+    top: 45%;
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: transparent;
+    border: 2px solid #fff;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+
+    z-index: 2;
+}
+
+.carrusel-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.carrusel-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.carrusel-prev {
+    left: 0;
+}
+
+.carrusel-next {
+    right: 0;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:992px) {
+
+    .cont-instrumentos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .txt {
+        max-width: 100%;
+    }
+
+    .btn-instrumento {
+        margin-inline: auto;
+    }
+
+    .carrusel {
+        padding: 30px 50px;
+    }
+
+    .carrusel-item {
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px) {
+
+    .instrumentos {
+        padding: 60px 20px;
+    }
+
+    .carrusel {
+        padding: 20px 40px;
+    }
+
+    .carrusel-item {
+        flex: 0 0 100%;
+    }
+
+    .carrusel-label {
+        min-width: 140px;
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .carrusel-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .carrusel-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:480px) {
+
+    .txt h3 {
+        line-height: 1.2;
+    }
+
+    .txt h5 {
+        line-height: 1;
+    }
+
+    .btn-instrumento {
+        width: 100%;
+        text-align: center;
+    }
+
+    .carrusel {
+        padding: 20px 30px;
+    }
+
+}
+
+/* =========================
+CALENDARIO
+========================= */
+
+.loquesevienne {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    gap: 40px;
+
+    background: #000;
+    color: #fff;
+
+    padding: 80px 5%;
+
+    font-family: 'Segoe UI', sans-serif;
+
+    align-items: stretch;
+
+    overflow: hidden;
+}
+
+/* =========================
+COLUMNA IZQUIERDA
+========================= */
+
+.lqv-intro {
+    position: relative;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    min-height: 550px;
+}
+
+.lqv-intro-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* TEXTO */
+
+.lqv-intro-text {
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+    right: 30px;
+
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+
+    line-height: 1.6;
+
+    color: #fff;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+
+    margin: 0;
+
+    z-index: 2;
+}
+
+/* =========================
+COLUMNA DERECHA
+========================= */
+
+.lqv-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-width: 0;
+}
+
+/* =========================
+BANNER
+========================= */
+
+.lqv-banner {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.lqv-banner img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+/* =========================
+CONTENIDO
+========================= */
+
+.lqv-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* =========================
+TITULO
+========================= */
+
+.lqv-title {
+    text-align: center;
+
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+
+    font-weight: 700;
+
+    margin-bottom: 40px;
+
+    color: white;
+
+    line-height: 1;
+}
+
+/* =========================
+CARDS
+========================= */
+
+.lqv-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+    width: 100%;
+}
+
+/* =========================
+TARJETA
+========================= */
+
+.lqv-card {
+    position: relative;
+
+    display: block;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: #d9d9d9;
+
+    aspect-ratio: 4/5;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    transition: 0.4s ease;
+}
+
+.lqv-card:hover {
+    transform: translateY(-8px);
+}
+
+/* =========================
+IMAGEN
+========================= */
+
+.lqv-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.6s ease;
+}
+
+.lqv-card:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================
+FECHA
+========================= */
+
+.lqv-date {
+    position: absolute;
+
+    top: 16px;
+    right: 18px;
+
+    font-size: clamp(1rem, 1.8vw, 1.7rem);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: right;
+
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    z-index: 2;
+}
+
+.lqv-date small {
+    display: block;
+
+    font-size: 0.8rem;
+
+    font-weight: 400;
+
+    margin-top: 4px;
+}
+
+/* =========================
+NOMBRE
+========================= */
+
+.lqv-name,
+.lqv-name-2 {
+    position: absolute;
+
+    bottom: 18px;
+    left: 18px;
+    right: 55px;
+
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+
+    font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+
+    line-height: 1.2;
+
+    z-index: 2;
+
+    word-break: break-word;
+}
+
+.lqv-name {
+    color: #fff;
+}
+
+.lqv-name-2 {
+    color: #000;
+}
+
+/* =========================
+CURSIVAS
+========================= */
+
+.cursivo,
+.cursivo-2 {
+    font-family: 'Estampa Script', cursive;
+
+    font-style: italic;
+
+    font-weight: 600;
+
+    font-size: clamp(1.0rem, 1.6vw, 1.4rem);
+
+    line-height: 0.9;
+
+    display: block;
+
+    margin-top: 4px;
+}
+
+.cursivo {
+    color: #fff;
+}
+
+.cursivo-2 {
+    color: #000;
+}
+
+/* =========================
+FLECHA
+========================= */
+
+.lqv-arrow {
+    position: absolute;
+
+    bottom: 16px;
+    right: 18px;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+
+    z-index: 2;
+}
+
+.lqv-card:hover .lqv-arrow {
+    transform: translate(4px, -4px);
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:992px) {
+
+    .loquesevienne {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .lqv-intro {
+        min-height: 420px;
+    }
+
+    .lqv-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lqv-title {
+        font-size: 3rem;
+    }
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px) {
+
+    .loquesevienne {
+        padding: 60px 20px;
+
+        gap: 40px;
+    }
+
+    .lqv-intro {
+        min-height: 320px;
+    }
+
+    .lqv-intro-text {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+
+        font-size: 0.95rem;
+    }
+
+    .lqv-title {
+        font-size: 2.5rem;
+
+        margin-bottom: 28px;
+    }
+
+    .lqv-cards {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .lqv-card {
+        aspect-ratio: 4/5;
+
+        max-width: 420px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .lqv-name,
+    .lqv-name-2 {
+        font-size: 1rem;
+
+        left: 16px;
+        right: 50px;
+        bottom: 16px;
+    }
+
+    .cursivo,
+    .cursivo-2 {
+        font-size: 1.8rem;
+    }
+
+    .lqv-date {
+        top: 14px;
+        right: 14px;
+
+        font-size: 1rem;
+    }
+
+    .lqv-arrow {
+        right: 16px;
+        bottom: 16px;
+
+        font-size: 1.3rem;
+    }
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:480px) {
+
+    .loquesevienne {
+        padding: 50px 16px;
+    }
+
+    .lqv-intro {
+        min-height: 260px;
+
+        border-radius: 16px;
+    }
+
+    .lqv-intro-text {
+        font-size: 0.9rem;
+
+        top: 16px;
+        left: 16px;
+        right: 16px;
+    }
+
+    .lqv-title {
+        font-size: 2rem;
+
+        margin-bottom: 24px;
+    }
+
+    .lqv-card {
+        border-radius: 16px;
+    }
+
+    .lqv-name,
+    .lqv-name-2 {
+        font-size: 0.95rem;
+
+        line-height: 1.15;
+    }
+
+    .cursivo,
+    .cursivo-2 {
+        font-size: 1.5rem;
+    }
+
+    .lqv-date {
+        font-size: 0.9rem;
+    }
+
+    .lqv-arrow {
+        font-size: 1.2rem;
+    }
+}
+
+/* =========================
+MOMENTOS
+========================= */
+
+/* SEPARACIÓN */
+
+/* =========================
+MOMENTOS
+========================= */
+
+.momentos {
+    width: 100%;
+    background: #000;
+    margin: 0;
+    padding: 0;
+}
+
+/* SEPARACIÓN = banner con festones (SVG) */
+.separacion {
+    position: relative;
+
+    width: 100%;
+    height: clamp(180px, 22vw, 320px);
+
+    background-image: url(Images/separacion.svg);
+    background-size: 100% 100%;
+    /* estira ancho completo, sin recortar */
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+}
+
+/* NOTAS MUSICALES (PNG izquierda y derecha) */
+.mom-notas {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    height: 70%;
+    width: auto;
+
+    pointer-events: none;
+}
+
+.mom-notas-izq {
+    left: 2%;
+}
+
+.mom-notas-der {
+    right: 2%;
+}
+
+/* TÍTULO encima del banner */
+.mom-titulo {
+    color: #fff;
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+
+    padding: 0 25%;
+    /* deja espacio para las notas a los lados */
+    margin: 0;
+    margin-top: -4%;
+    /* sube el título un poco respecto a los festones */
+
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+}
+
+.mom-titulo em {
+    font-style: italic;
+    font-weight: 500;
+    font-family: 'Great Vibes', 'Times New Roman', cursive;
+    font-size: 1.2em;
+}
+
+/* COLLAGE: sube debajo de los festones */
+.collage {
+    position: relative;
+    width: 100%;
+    margin-top: clamp(-90px, -10vw, -50px);
+    /* tuca las fotos bajo el festón */
+    z-index: 1;
+}
+
+.mom-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    width: 100%;
+}
+
+.mom-foto {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    line-height: 0;
+}
+
+.mom-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.mom-foto:hover img {
+    transform: scale(1.03);
+}
+
+.mom-foto-grande {
+    grid-column: 1 / -1;
+    margin-top: -10px;
+    max-height: 600px;
+}
+
+/* TABLET */
+@media(max-width:992px) {
+    .mom-collage {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mom-foto-grande {
+        grid-column: 1 / -1;
+    }
+
+    .mom-titulo {
+        padding: 0 22%;
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+    .separacion {
+        height: clamp(140px, 26vw, 220px);
+    }
+
+    .mom-titulo {
+        padding: 0 20%;
+        font-size: clamp(1.3rem, 5vw, 2rem);
+    }
+
+    .mom-notas {
+        height: 60%;
+    }
+
+    .collage {
+        margin-top: -30px;
+    }
+
+    .mom-collage {
+        grid-template-columns: 1fr;
+    }
+
+    .mom-foto-grande {
+        max-height: 350px;
+    }
+}
+
+/* SMALL MOBILE */
+@media(max-width:480px) {
+    .mom-titulo {
+        padding: 0 15%;
+        font-size: 1.2rem;
+    }
+
+    .mom-notas {
+        height: 50%;
+    }
+}
+
+/* =========================
+COLLAGE
+========================= */
+
+.collage {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+
+    margin-top: -80px;
+
+    overflow: hidden;
+}
+
+/* GRID */
+
+.mom-collage {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 100%;
+}
+
+/* FOTO */
+
+.mom-foto {
+    position: relative;
+
+    width: 100%;
+    overflow: hidden;
+
+    aspect-ratio: 1 / 1;
+}
+
+/* IMAGEN */
+
+.mom-foto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.mom-foto:hover img {
+    transform: scale(1.03);
+}
+
+/* FOTO GRANDE */
+
+.mom-foto-grande {
+    grid-column: 1 / -1;
+
+    aspect-ratio: 16 / 7;
+
+    max-height: 650px;
+}
+
+/* =========================
+CORREO
+========================= */
+
+.correo {
+    width: 100%;
+
+    background-image: url(Images/correo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 80px 5%;
+
+    overflow: hidden;
+}
+
+/* CONTENEDOR */
+
+.cont-correo {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    flex-wrap: wrap;
+}
+
+/* TITULO */
+
+.cont-correo h3 {
+    flex: 1;
+
+    min-width: 300px;
+
+    color: white;
+
+    font-size: 64px;
+
+    line-height: 1.1;
+
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.90);
+}
+
+/* =========================
+NEWSLETTER
+========================= */
+
+.newsletter {
+    flex: 1;
+
+    min-width: 320px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* INPUT */
+
+.input-container {
+    width: 100%;
+    max-width: 650px;
+
+    height: 70px;
+
+    background: #e8d892;
+
+    border-radius: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 30px;
+    padding-right: 10px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* INPUT TEXTO */
+
+.input-container input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 16px;
+
+    color: #8f8458;
+
+    font-family: "Fredoka", sans-serif;
+}
+
+.input-container input::placeholder {
+    color: #b5a66c;
+}
+
+/* BOTÓN */
+
+.mail-btn {
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f24d2e;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: 0.3s ease;
+}
+
+.mail-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ICONO */
+
+.mail-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* =========================
+LAPTOP
+========================= */
+
+@media(max-width:1200px) {
+
+    .collage {
+        margin-top: -60px;
+    }
+
+    .cont-correo h3 {
+        font-size: 52px;
+    }
+
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:992px) {
+
+    /* COLLAGE */
+
+    .mom-collage {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mom-foto-grande {
+        grid-column: 1 / -1;
+
+        aspect-ratio: 16 / 9;
+    }
+
+    .collage {
+        margin-top: -45px;
+    }
+
+    /* CORREO */
+
+    .correo {
+        padding: 70px 40px;
+    }
+
+    .cont-correo {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .cont-correo h3 {
+        font-size: 48px;
+
+        max-width: 700px;
+    }
+
+    .newsletter {
+        justify-content: center;
+
+        width: 100%;
+    }
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px) {
+
+    /* COLLAGE */
+
+    .collage {
+        margin-top: -30px;
+    }
+
+    .mom-collage {
+        grid-template-columns: 1fr;
+    }
+
+    .mom-foto {
+        aspect-ratio: 4 / 4;
+    }
+
+    .mom-foto-grande {
+        aspect-ratio: 16 / 10;
+
+        max-height: 380px;
+    }
+
+    /* CORREO */
+
+    .correo {
+        padding: 60px 20px;
+    }
+
+    .cont-correo {
+        gap: 35px;
+    }
+
+    .cont-correo h3 {
+        font-size: 40px;
+
+        min-width: unset;
+    }
+
+    .newsletter {
+        min-width: unset;
+    }
+
+    .input-container {
+        height: 62px;
+
+        border-radius: 50px;
+
+        padding-left: 22px;
+        padding-right: 8px;
+    }
+
+    .input-container input {
+        font-size: 15px;
+    }
+
+    .mail-btn {
+        width: 46px;
+        height: 46px;
+    }
+
+    .mail-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:480px) {
+
+    /* COLLAGE */
+
+    .collage {
+        margin-top: -20px;
+    }
+
+    .mom-foto {
+        aspect-ratio: 1 / 1;
+    }
+
+    .mom-foto-grande {
+        aspect-ratio: 16 / 11;
+
+        max-height: 300px;
+    }
+
+    /* CORREO */
+
+    .correo {
+        padding: 50px 16px;
+    }
+
+    .cont-correo {
+        gap: 28px;
+    }
+
+    .cont-correo h3 {
+        font-size: 32px;
+
+        line-height: 1.15;
+    }
+
+    .input-container {
+        height: 56px;
+
+        border-radius: 40px;
+
+        padding-left: 18px;
+    }
+
+    .input-container input {
+        font-size: 14px;
+    }
+
+    .mail-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .mail-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+
+/* =========================
+PROYECTO
+========================= */
+
+.proyecto {
+    position: relative;
+
+    width: 100%;
+
+    background: linear-gradient(135deg, #000 0%, #121212 40%, #2b1036 100%);
+
+    overflow: hidden;
+
+    padding: 120px 5%;
+}
+
+/* FONDO DECORATIVO */
+
+.proyecto-bg {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        radial-gradient(circle at top left, rgba(233, 66, 40, 0.25), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(177, 127, 206, 0.25), transparent 30%);
+
+    pointer-events: none;
+}
+
+/* CONTENEDOR */
+
+.proyecto-container {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 80px;
+
+    flex-wrap: wrap;
+}
+
+/* =========================
+TEXTO
+========================= */
+
+.proyecto-info {
+    flex: 1;
+
+    min-width: 300px;
+
+    max-width: 650px;
+}
+
+/* TAG */
+
+.tag-proyecto {
+    display: inline-block;
+
+    background: #E94228;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+/* TITULO */
+
+.proyecto-info h2 {
+    color: white;
+
+    font-size: clamp(2.5rem, 5vw, 5rem);
+
+    line-height: 1;
+
+    margin-bottom: 35px;
+
+    font-weight: 800;
+}
+
+.proyecto-info h2 em {
+    color: #E8D892;
+
+    font-style: italic;
+
+    font-family: "Times New Roman", serif;
+
+    font-weight: 400;
+}
+
+/* PÁRRAFOS */
+
+.proyecto-info p {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+
+    line-height: 1.8;
+
+    margin-bottom: 24px;
+
+    max-width: 95%;
+}
+
+/* =========================
+VISUAL
+========================= */
+
+.proyecto-visual {
+    position: relative;
+
+    flex: 1;
+
+    min-width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGEN */
+
+.proyecto-visual img {
+    width: 100%;
+
+    max-width: 500px;
+
+    border-radius: 30px;
+
+    object-fit: cover;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+}
+
+/* BURBUJAS */
+
+.bubble {
+    position: absolute;
+
+    padding: 14px 22px;
+
+    border-radius: 999px;
+
+    color: white;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    backdrop-filter: blur(10px);
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+}
+
+.bubble1 {
+    top: 10%;
+    left: -5%;
+
+    background: #E94228;
+}
+
+.bubble2 {
+    bottom: 15%;
+    right: -5%;
+
+    background: #B17FCE;
+}
+
+.bubble3 {
+    top: 55%;
+    left: -10%;
+
+    background: #E8D892;
+    color: black;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:992px) {
+
+    .proyecto-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .proyecto-info p {
+        max-width: 100%;
+    }
+
+    .bubble1 {
+        left: 0;
+    }
+
+    .bubble2 {
+        right: 0;
+    }
+
+    .bubble3 {
+        left: 5%;
+    }
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px) {
+
+    .proyecto {
+        padding: 80px 20px;
+    }
+
+    .proyecto-info h2 {
+        line-height: 1.1;
+    }
+
+    .bubble {
+        font-size: 0.75rem;
+        padding: 10px 16px;
+    }
+
+    .proyecto-visual img {
+        border-radius: 22px;
+    }
+
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:480px) {
+
+    .bubble {
+        position: static;
+
+        margin-top: 12px;
+    }
+
+    .proyecto-visual {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+    background: #000;
+    color: white;
+
+    padding: 80px 5% 30px;
+
+    font-family: sans-serif;
+
+    overflow: hidden;
+}
+
+/* =========================
+CONTENEDOR
+========================= */
+
+.footer-container {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 60px;
+
+    flex-wrap: wrap;
+}
+
+/* =========================
+COLUMNAS
+========================= */
+
+.footer-social,
+.footer-logo,
+.footer-menu {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* =========================
+REDES
+========================= */
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-social h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+
+    font-weight: 700;
+
+    margin-bottom: 24px;
+
+    color: white;
+
+    line-height: 1.4;
+}
+
+/* ICONOS */
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+
+    flex-shrink: 0;
+}
+
+.icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.icon:hover {
+    transform: scale(1.08);
+}
+
+/* COLORES */
+
+.red {
+    background: #f4472f;
+}
+
+.purple {
+    background: #af7ad6;
+}
+
+.blue {
+    background: #6698e6;
+}
+
+/* =========================
+LOGO FILARMED
+========================= */
+
+.filarmed-logo {
+    margin-top: 55px;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.filarmed-logo:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+.filarmed-logo img {
+    width: 140px;
+    height: auto;
+
+    object-fit: contain;
+
+
+    opacity: 0.95;
+
+    transition: 0.3s ease;
+}
+
+.filarmed-logo img:hover {
+    transform: scale(1.03);
+}
+
+/* =========================
+LOGO CENTRAL
+========================= */
+
+.footer-logo {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 100%;
+    max-width: 240px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* =========================
+MENÚ
+========================= */
+
+.footer-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-menu ul {
+    list-style: disc;
+
+    padding-left: 20px;
+}
+
+.footer-menu li {
+    margin-bottom: 14px;
+}
+
+/* LINKS */
+
+.footer-menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: clamp(1rem, 2vw, 1.2rem);
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.footer-menu a:hover {
+    opacity: 0.7;
+}
+
+/* =========================
+COPYRIGHT
+========================= */
+
+.footer-copy {
+    text-align: center;
+
+    margin-top: 70px;
+}
+
+.footer-copy p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+
+    font-weight: 500;
+
+    color: white;
+}
+
+/* =========================
+LAPTOP
+========================= */
+
+@media(max-width:1200px) {
+
+    .footer-container {
+        gap: 40px;
+    }
+
+    .footer-logo img {
+        max-width: 200px;
+    }
+
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:992px) {
+
+    .footer {
+        padding: 70px 40px 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 55px;
+    }
+
+    .footer-social,
+    .footer-logo,
+    .footer-menu {
+        width: 100%;
+        min-width: unset;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-social {
+        order: 1;
+    }
+
+    .footer-logo {
+        order: 2;
+    }
+
+    .footer-menu {
+        order: 3;
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-menu ul {
+        list-style: none;
+
+        padding-left: 0;
+    }
+
+    .filarmed-logo {
+        margin-top: 35px;
+    }
+
+    .footer-logo img {
+        max-width: 200px;
+    }
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px) {
+
+    .footer {
+        padding: 60px 20px 30px;
+    }
+
+    .footer-container {
+        gap: 45px;
+    }
+
+    .footer-social h3 {
+        font-size: 1.1rem;
+    }
+
+    .social-icons {
+        gap: 16px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-logo img {
+        max-width: 170px;
+    }
+
+    .filarmed-logo {
+        margin-top: 28px;
+    }
+
+    .filarmed-logo img {
+        width: 110px;
+    }
+
+    .footer-menu li {
+        margin-bottom: 12px;
+    }
+
+    .footer-menu a {
+        font-size: 1rem;
+    }
+
+    .footer-copy {
+        margin-top: 45px;
+    }
+
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:480px) {
+
+    .footer {
+        padding: 50px 18px 25px;
+    }
+
+    .footer-container {
+        gap: 38px;
+    }
+
+    .footer-social h3 {
+        font-size: 1rem;
+
+        line-height: 1.5;
+    }
+
+    .social-icons {
+        gap: 14px;
+    }
+
+    .icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-logo img {
+        max-width: 150px;
+    }
+
+    .filarmed-logo img {
+        width: 95px;
+    }
+
+    .footer-menu a {
+        font-size: 0.95rem;
+    }
+
+    .footer-copy p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+}
+
+
+
+
+
+
+
+/* =========================
+RESET GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
+TIPOGRAFÍAS GLOBALES
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+}
+
+p,
+span,
+a,
+li,
+button,
+input {
+    font-family: "Fredoka", sans-serif;
+}
+
+/* =========================
+CLASES DECORATIVAS
+========================= */
+
+.fredericka {
+    font-family: "Fredericka the Great", serif !important;
+    font-weight: 400 !important;
+}
+
+.fredoka {
+    font-family: "Fredoka", sans-serif !important;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.menu li {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.header-txt h2 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+}
+
+.header-txt h3 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* =========================
+BOTONES
+========================= */
+
+.btn-header1,
+.btn-emoji,
+.btn-instrumento,
+.carrusel-label,
+.tag-proyecto,
+.mail-btn {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+}
+
+/* =========================
+SECCIÓN EMOCIONES
+========================= */
+
+.emociones h4 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+}
+
+.btn-emoji {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+}
+
+.txt-emoji {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* =========================
+SECCIÓN INSTRUMENTOS
+========================= */
+
+.txt h3,
+.txt h2 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+}
+
+.txt h5 {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.txt-instrumentos {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.btn-instrumento {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+}
+
+.carrusel-label {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/* =========================
+CALENDARIO
+========================= */
+
+.lqv-title {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+}
+
+.lqv-intro-text,
+.lqv-name,
+.lqv-date {
+    font-family: "Fredoka", sans-serif;
+}
+
+/* =========================
+MOMENTOS FILARMED
+========================= */
+
+.mom-titulo {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+}
+
+.mom-titulo em {
+    font-family: "Fredericka the Great", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* =========================
+CORREO
+========================= */
+
+.cont-correo h3 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+}
+
+.input-container input {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+}
+
+/* =========================
+PROYECTO
+========================= */
+
+.proyecto-info h2 {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.proyecto-info h2 em {
+    font-family: "Fredericka the Great", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.proyecto-info p {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.tag-proyecto {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+}
+
+.bubble {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer {
+    font-family: "Fredoka", sans-serif;
+}
+
+.footer-social h3,
+.footer-menu a {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+}
+
+.footer-copy p {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+}
+
+/* =========================
+TEXTOS DECORATIVOS ESPECÍFICOS
+========================= */
+
+/* Ejemplo:
+   <span class="decorativo">instrumento</span>
+*/
+
+.decorativo {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+}
+
+/* =========================
+PESO VISUAL GENERAL
+========================= */
+
+strong,
+b {
+    font-weight: 700;
+}
+
+/* =========================
+PLACEHOLDERS
+========================= */
+
+::placeholder {
+    font-family: "Fredoka", sans-serif;
+}
+
+/* =========================
+RESPONSIVE TIPOGRAFÍAS
+========================= */
+
+@media(max-width:768px) {
+
+    .header-txt h3,
+    .proyecto-info h2,
+    .mom-titulo,
+    .lqv-title {
+        line-height: 1.15;
+    }
+
+    .txt h5 {
+        line-height: 1.1;
+    }
+}
+
+
+/* =========================
+ESTAMPA SCRIPT
+========================= */
+
+/* TITULOS CURSIVOS */
+
+.mom-titulo em,
+.proyecto-info h2 em,
+.lqv-name em {
+    font-family: 'Estampa Script', cursive;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* TEXTO GRANDE DECORATIVO */
+
+
+
+/* TITULOS PRINCIPALES */
+
+.header-txt h3,
+.emociones h4,
+.lqv-title,
+.cont-correo h3,
+.proyecto-info h2,
+.mom-titulo {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 700;
+}
